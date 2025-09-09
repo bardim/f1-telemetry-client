@@ -6,10 +6,10 @@ const RED_BULL_COLOR = '#0600EF';
 const WILLIAMS_COLOR = '#005AFF';
 const ASTON_MARTIN_COLOR = '#006F62';
 const ALPINE_COLOR = '#0090FF';
-const ALPHA_TAURI_COLOR = '#2B4562';
+const RB_COLOR = '#6692FF';
 const HAAS_COLOR = '#FFFFFF';
 const MCLAREN_COLOR = '#FF8700';
-const ALFA_ROMEO_COLOR = '#900000';
+const SAUBER_COLOR = '#52C832';
 const LOTUS_COLOR = '#fcd56d';
 const JORDAN_COLOR = '#006F62';
 const BENTETTON_COLOR = '#fcd56d';
@@ -50,10 +50,10 @@ export const TEAMS: {[index: number]: Team} = {
   3: {name: 'Williams', color: WILLIAMS_COLOR},
   4: {name: 'Aston Martin', color: ASTON_MARTIN_COLOR},
   5: {name: 'Alpine', color: ALPINE_COLOR},
-  6: {name: 'Alpha Tauri', color: ALPHA_TAURI_COLOR},
+  6: {name: 'RB', color: RB_COLOR},
   7: {name: 'Haas', color: HAAS_COLOR},
   8: {name: 'McLaren', color: MCLAREN_COLOR},
-  9: {name: 'Alfa Romeo', color: ALFA_ROMEO_COLOR},
+  9: {name: 'Sauber', color: SAUBER_COLOR},
   10: {name: 'McLaren 1988', color: MCLAREN_COLOR},
   11: {name: 'McLaren 1991', color: MCLAREN_COLOR},
   12: {name: 'Williams 1992', color: WILLIAMS_COLOR},
@@ -120,10 +120,10 @@ export const TEAMS: {[index: number]: Team} = {
   88: {name: 'Williams 2020', color: WILLIAMS_COLOR},
   89: {name: 'Racing Point 2020', color: RACING_POINT_COLOR_2020},
   90: {name: 'Renault 2020', color: RENAULT_COLOR_2020},
-  91: {name: 'Alpha Tauri 2020', color: ALPHA_TAURI_COLOR},
+  91: {name: 'Alpha Tauri 2020', color: RB_COLOR},
   92: {name: 'Haas 2020', color: HAAS_COLOR},
   93: {name: 'McLaren 2020', color: MCLAREN_COLOR},
-  94: {name: 'Alfa Romeo 2020', color: ALFA_ROMEO_COLOR},
+  94: {name: 'Alfa Romeo 2020', color: SAUBER_COLOR},
   95: {name: 'Aston Martin DB11 V12', color: ASTON_MARTIN_COLOR},
   96: {name: 'Aston Martin Vantage F1 Edition', color: ASTON_MARTIN_COLOR},
   97: {name: 'Aston Martin Vantage Safety Car', color: ASTON_MARTIN_COLOR},
@@ -152,10 +152,10 @@ export const TEAMS: {[index: number]: Team} = {
   121: {name: 'Williams 22', color: WILLIAMS_COLOR},
   122: {name: 'Aston Martin 22', color: ASTON_MARTIN_COLOR},
   123: {name: 'Alpine 22', color: ALPINE_COLOR},
-  124: {name: 'Alpha Tauri 22', color: ALPHA_TAURI_COLOR},
+  124: {name: 'Alpha Tauri 22', color: RB_COLOR},
   125: {name: 'Haas 22', color: HAAS_COLOR},
   126: {name: 'McLaren 22', color: MCLAREN_COLOR},
-  127: {name: 'Alfa Romeo 22', color: ALFA_ROMEO_COLOR},
+  127: {name: 'Alfa Romeo 22', color: SAUBER_COLOR},
   128: {name: 'Konnersport 22', color: KONNORSPORT_COLOR},
   129: {name: 'Konnersport', color: KONNORSPORT_COLOR},
   130: {name: 'Prema 22', color: PREMA_COLOR},

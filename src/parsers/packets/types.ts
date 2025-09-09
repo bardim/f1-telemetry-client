@@ -140,6 +140,34 @@ export interface PacketSessionData extends PacketBase {
   m_numSafetyCarPeriods?: number;
   m_numVirtualSafetyCarPeriods?: number;
   m_numRedFlagPeriods?: number;
+  m_equalCarPerformance?: number;
+  m_recoveryMode?: number;
+  m_flashbackLimit?: number;
+  m_surfaceType?: number;
+  m_lowFuelMode?: number;
+  m_raceStarts?: number;
+  m_tyreTemperature?: number;
+  m_pitLaneTyreSim?: number;
+  m_carDamage?: number;
+  m_carDamageRate?: number;
+  m_collisions?: number;
+  m_collisionsOffForFirstLapOnly?: number;
+  m_mpUnsafePitRelease?: number;
+  m_mpOffForGriefing?: number;
+  m_cornerCuttingStringency?: number;
+  m_parcFermeRules?: number;
+  m_pitStopExperience?: number;
+  m_safetyCar?: number;
+  m_safetyCarExperience?: number;
+  m_formationLap?: number;
+  m_formationLapExperience?: number;
+  m_redFlags?: number;
+  m_affectsLicenceLevelSolo?: number;
+  m_affectsLicenceLevelMP?: number;
+  m_numSessionsInWeekend?: number;
+  m_weekendStructure?: number[];
+  m_sector2LapDistanceStart?: number;
+  m_sector3LapDistanceStart?: number;
 }
 
 export interface MarshalZone {
@@ -533,6 +561,27 @@ export interface PacketTyreSetsData extends PacketBase {
   m_fittedIdx: number;
 }
 
+export interface TimeTrialDataSet {
+  m_carIdx: number;
+  m_teamId: number;
+  m_lapTimeInMS: number;
+  m_sector1TimeInMS: number;
+  m_sector2TimeInMS: number;
+  m_sector3TimeInMS: number;
+  m_tractionControl: number;
+  m_gearboxAssist: number;
+  m_antiLockBrakes: number;
+  m_equalCarPerformance: number;
+  m_customSetup: number;
+  m_valid: number;
+}
+
+export interface PacketTimeTrialData extends PacketBase {
+  m_playerSessionBestDataSet: TimeTrialDataSet;
+  m_personalBestDataSet: TimeTrialDataSet;
+  m_rivalDataSet: TimeTrialDataSet;
+}
+
 export type PacketEvent =
   | GenericEvent
   | LightEvent
@@ -558,4 +607,5 @@ export type Packet =
   | PacketFinalClassificationData
   | PacketLobbyInfoData
   | PacketTyreSetsData
-  | PacketMotionExData;
+  | PacketMotionExData
+  | PacketTimeTrialData;

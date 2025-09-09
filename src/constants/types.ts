@@ -37,7 +37,8 @@ export type PacketTypes =
   | 'carDamage'
   | 'sessionHistory'
   | 'tyreSets'
-  | 'motionEx';
+  | 'motionEx'
+  | 'timeTrial';
 
 export type PacketSize = number;
 
