@@ -54,11 +54,22 @@ export class PacketSessionDataParser extends F1Parser<PacketSessionData> {
       });
     }
 
-    if (packetFormat >= 2021) {
+    if (packetFormat >= 2021 && packetFormat < 2024) {
       this.array('m_weatherForecastSamples', {
         type: new WeatherForecastSampleParser(packetFormat),
         length: 56,
       })
+    }
+
+    if (packetFormat >= 2024) {
+      this.array('m_weatherForecastSamples', {
+        type: new WeatherForecastSampleParser(packetFormat),
+        length: 64,
+      })
+    }
+
+    if (packetFormat >= 2021) {
+      this
         .uint8('m_forecastAccuracy')
         .uint8('m_aiDifficulty')
         .uint32le('m_seasonLinkIdentifier')
@@ -93,6 +104,40 @@ export class PacketSessionDataParser extends F1Parser<PacketSessionData> {
         .uint8('m_numSafetyCarPeriods')
         .uint8('m_numVirtualSafetyCarPeriods')
         .uint8('m_numRedFlagPeriods');
+    }
+
+    if (packetFormat >= 2024) {
+      this.uint8('m_equalCarPerformance')
+        .uint8('m_recoveryMode')
+        .uint8('m_flashbackLimit')
+        .uint8('m_surfaceType')
+        .uint8('m_lowFuelMode')
+        .uint8('m_raceStarts')
+        .uint8('m_tyreTemperature')
+        .uint8('m_pitLaneTyreSim')
+        .uint8('m_carDamage')
+        .uint8('m_carDamageRate')
+        .uint8('m_collisions')
+        .uint8('m_collisionsOffForFirstLapOnly')
+        .uint8('m_mpUnsafePitRelease')
+        .uint8('m_mpOffForGriefing')
+        .uint8('m_cornerCuttingStringency')
+        .uint8('m_parcFermeRules')
+        .uint8('m_pitStopExperience')
+        .uint8('m_safetyCar')
+        .uint8('m_safetyCarExperience')
+        .uint8('m_formationLap')
+        .uint8('m_formationLapExperience')
+        .uint8('m_redFlags')
+        .uint8('m_affectsLicenceLevelSolo')
+        .uint8('m_affectsLicenceLevelMP')
+        .uint8('m_numSessionsInWeekend')
+        .array('m_weekendStructure', {
+          length: 12,
+          type: 'uint8',
+        })
+        .floatle('m_sector2LapDistanceStart')
+        .floatle('m_sector3LapDistanceStart');
     }
 
     this.data = this.fromBuffer(buffer);

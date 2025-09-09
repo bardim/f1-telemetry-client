@@ -4,18 +4,18 @@
 
 The F1 series of games support the outputting of key game data via a UDP data stream. This data can be interpreted by external apps or connected peripherals for a range of different uses, including providing additional telemetry information, customised HUD displays, motion platform hardware support or providing force feedback data for custom steering wheels.
 
-This is a TypeScript UDP client and telemetry parser for EA - Codemaster's F1 23, F1 22, F1 2021, F1 2020, F1 2019 and F1 2018, that enables the consumption of such information.
+This is a TypeScript UDP client and telemetry parser for EA - Codemaster's F1 24, F1 23, F1 22, F1 2021, F1 2020, F1 2019 and F1 2018, that enables the consumption of such information.
 
 ## Installing
 
 ```
-$ npm install @racehub-io/f1-telemetry-client
+$ npm install @bardim/f1-telemetry-client
 ```
 
 or
 
 ```
-$ yarn add @racehub-io/f1-telemetry-client
+$ yarn add @bardim/f1-telemetry-client
 ```
 
 ## Running the playground
@@ -73,6 +73,7 @@ client.stop();
 
 The following links contain information that summarises the UDP data structures so that developers of supporting hardware or software are able to configure these to work correctly with the F1 game.
 
+- [F1 2024 UDP Spec](https://answers.ea.com/t5/General-Discussion/F1-24-UDP-Specification/td-p/13633494)
 - [F1 2023 UDP Spec](https://answers.ea.com/t5/General-Discussion/F1-23-UDP-Specification/td-p/12632888)
 - [F1 2022 UDP Spec](https://answers.ea.com/t5/General-Discussion/F1-22-UDP-Specification/td-p/11551274)
 - [F1 2020 UDP Spec](https://forums.codemasters.com/topic/50942-f1-2020-udp-specification/)  
